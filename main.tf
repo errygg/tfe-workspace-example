@@ -1,10 +1,10 @@
 provider "aws" {
-  region = "${var.region}"
+  region = var.region
 }
 
 terraform {
   backend "remote" {
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     organization = "erik-rygg"
 
     workspaces {
